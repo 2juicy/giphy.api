@@ -7,19 +7,63 @@ body{
     color:white;
     background: black;
 }
+#gameInput{
+    color: blue;
+    border: #334fcc solid 1px;
+    box-shadow: 0px 3px 8px whitesmoke;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 hr{
     display: block;
     height: 1px;
     border:0;
     border-top: 1px solid #ccc;
     margin: 5px 0px 5px 0px;
+    clear:both;
+}
+.rate, .title{
+    font-size: 18px;
+    font-style: italic;
+    text-shadow: -1px -1px 1px #33cccc,
+             0px 4px 1px #334fcc,
+             4px 4px 5px rgba(85, 184, 175, 0.7),
+             0px 0px 7px #33cccc;
+}
+.title{
+    font-size: 20px;
+    font-style: bold;
+    text-shadow: -1px -1px 1px #334fcc,
+             0px 4px 1px #33cccc,
+             4px 4px 5px gray,
+             0px 0px 7px #334fcc;
 }
 .g{
     float: left;
     padding: 3px;
-    border: 1px solid gray;
+    margin: 2px;
+    box-shadow: 0px 3px 8px whitesmoke;
     border-radius: 3px 3px 3px 3px;
+    animation: colorchange 5s infinite;
+    -webkit-animation: colorchange 5s infinite; 
 }
+@keyframes colorchange
+    {
+      0%   {background: #33cccc;}
+      25%  {background: rgb(229, 255, 0);}
+      50%  {background: #334fcc;}
+      75%  {background: green;}
+      100% {background: rgb(170, 228, 77);}
+    }
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: #33cccc;}
+      25%  {background: rgb(229, 255, 0);}
+      50%  {background: #334fcc;}
+      75%  {background: green;}
+      100% {background: rgb(170, 228, 77);}
+    }
 .games, #addGame, label{
     margin: 5px 1px 5px 5px;
     padding: 5px;
@@ -32,8 +76,12 @@ hr{
              0px 0px 7px #33cccc;
     font-size: 20px;
 }
+#gameForm{
+    float:right;
+}
 h1{
-    text-align:center;
+    display: block;
+    float: left;
     text-shadow: -1px -1px 1px #33cccc,
              0px 4px 1px #334fcc,
              4px 4px 5px rgba(85, 184, 175, 0.7),
