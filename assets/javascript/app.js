@@ -1,6 +1,6 @@
 //Global Variables
 var topics = ['Overwatch', 'Hearthstone'];
-//function for AJAX
+//function for AJAX to populate page
 function displayInfo(){
     var search = $(this).attr("data-name");
     console.log(search);
@@ -24,7 +24,7 @@ function displayInfo(){
         $("#images").prepend(gameImage);
     });
 }
-//Function copied from activity for displaying search data
+//Function for appending buttons
 function renderButtons() {
     $("#buttons").empty();
     for (var i = 0; i < topics.length; i++) {
@@ -36,7 +36,7 @@ function renderButtons() {
     }
 }
 
-//on.click to add buttons copied from activity.
+//on.click to add buttons
 $("#addGame").on("click", function(event) {
     event.preventDefault();
     var games = $("#gameInput").val().trim();
