@@ -13,7 +13,8 @@ function displayInfo(){
         console.log(response);
         //   $("#gif").text(JSON.stringify(response));       
         //stores image in a var.
-        var imageUrl = response.data.image_original_url;
+        var imageUrl = response.data;
+        var p = $('<p>').text('Rating: ' + rating);
         //setup to create <img> element
         var gameImage = $("<div class='g'>");
         //sets source of image
@@ -40,6 +41,9 @@ function renderButtons() {
 $("#addGame").on("click", function(event) {
     event.preventDefault();
     var games = $("#gameInput").val().trim();
+    if (games == ''){
+        return;
+    }
     topics.push(games);
     renderButtons();
     console.log(topics);
