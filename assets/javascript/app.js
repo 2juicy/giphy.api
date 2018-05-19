@@ -1,5 +1,5 @@
 //Global Variables
-var searches = ['Overwatch', 'Hearthstone'];
+var topics = ['Overwatch', 'Hearthstone'];
 //function for AJAX
 function displayInfo(){
     var search = $(this).attr("data-name");
@@ -27,11 +27,11 @@ function displayInfo(){
 //Function copied from activity for displaying search data
 function renderButtons() {
     $("#buttons").empty();
-    for (var i = 0; i < searches.length; i++) {
+    for (var i = 0; i < topics.length; i++) {
         var a = $("<button>");
         a.addClass("games");
-        a.attr("data-name", searches[i]);
-        a.text(searches[i]);
+        a.attr("data-name", topics[i]);
+        a.text(topics[i]);
         $("#buttons").append(a);
     }
 }
@@ -40,11 +40,10 @@ function renderButtons() {
 $("#addGame").on("click", function(event) {
     event.preventDefault();
     var games = $("#gameInput").val().trim();
-    searches.push(games);
+    topics.push(games);
     renderButtons();
-    console.log(searches);
+    console.log(topics);
 });
-
 //On.click for AJAX populating page
 $(document).on("click", ".games", displayInfo);
 //call once at start
