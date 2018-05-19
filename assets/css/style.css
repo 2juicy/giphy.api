@@ -39,6 +39,7 @@ hr{
 .rate, .title{
     font-size: 18px;
     font-style: italic;
+    text-align:center;
     text-shadow: -1px -1px 1px #33cccc,
              0px 4px 1px #334fcc,
              4px 4px 5px rgba(85, 184, 175, 0.7),
