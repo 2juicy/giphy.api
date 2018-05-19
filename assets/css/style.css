@@ -22,17 +22,16 @@ body{
 }
 #gameInput{
     color: blue;
-    border: #334fcc solid 1px;
+    border: #334fcc solid 2px;
     box-shadow: 0px 3px 8px whitesmoke;
     border-radius: 2px 2px 2px 2px;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
 }
 hr{
     display: block;
     height: 1px;
     border:0;
-    border-top: 1px solid #ccc;
+    border-top: 1.22px solid #ccc;
     margin: 5px 0px 5px 0px;
     clear:both;
 }
@@ -41,6 +40,7 @@ hr{
     font-style: italic;
     text-align:center;
     text-shadow: -1px -1px 1px #33cccc,
+            2px 1px 1px black,
              0px 4px 1px #334fcc,
              4px 4px 5px rgba(85, 184, 175, 0.7),
              0px 0px 7px #33cccc;
@@ -49,6 +49,7 @@ hr{
     font-size: 20px;
     font-style: bold;
     text-shadow: -1px -1px 1px #334fcc,
+            2px 1px 1px black,
              0px 4px 1px #33cccc,
              4px 4px 5px gray,
              0px 0px 7px #334fcc;
@@ -63,7 +64,7 @@ hr{
     -webkit-animation: colorchange 5s infinite; 
 }
 .games, #addGame{
-    margin: 5px 1px 5px 5px;
+    margin: 2px 1px 5px 5px;
     padding: 5px;
     animation: colorchange 4s infinite;
     border: 2px solid white;
@@ -71,16 +72,39 @@ hr{
     box-shadow: 0px 3px 8px whitesmoke;
     border-radius: 15px 15px 15px 15px;
     text-shadow: -1px -1px 1px #33cccc,
+            2px 1px 1px black,
              0px 4px 1px #334fcc,
              4px 4px 5px rgba(85, 184, 175, 0.7),
              0px 0px 7px #33cccc;
     font-size: 20px;
 }
 #addGame{
+    font-size: 23px;
     animation: colorchange 2s infinite;
 }
 .games:hover, #addGame:hover{
     border: 2px solid red;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 .games:active, #addGame:active {
     background: antiquewhite;
@@ -89,6 +113,7 @@ hr{
     }
 label{
     text-shadow: -1px -1px 1px #33cccc,
+            2px 1px 1px black,
              0px 4px 1px #334fcc,
              4px 4px 5px rgba(85, 184, 175, 0.7),
              0px 0px 7px #33cccc;
@@ -100,7 +125,7 @@ label{
       0%   {background: #33cccc;}
       25%  {background: rgb(229, 255, 0);}
       50%  {background: #334fcc;}
-      75%  {background: green;}
+      75%  {background: rgb(73, 146, 175);}
       100% {background: rgb(170, 228, 77);}
     }
     @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
@@ -119,6 +144,7 @@ h1{
     display: block;
     float: left;
     text-shadow: -1px -1px 1px #33cccc,
+            2px 1px 1px black,
              0px 4px 1px #334fcc,
              4px 4px 5px rgba(85, 184, 175, 0.7),
              0px 0px 7px #33cccc;
