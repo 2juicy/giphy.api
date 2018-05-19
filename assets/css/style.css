@@ -61,19 +61,27 @@ hr{
     animation: colorchange 5s infinite;
     -webkit-animation: colorchange 5s infinite; 
 }
-.games, #addGame, label{
+.games, #addGame{
     margin: 5px 1px 5px 5px;
     padding: 5px;
     animation: colorchange 4s infinite;
     border: 2px solid white;
-    box-shadow: 0px 3px 8px whitesmoke;
     color: white;
+    box-shadow: 0px 3px 8px whitesmoke;
     border-radius: 15px 15px 15px 15px;
     text-shadow: -1px -1px 1px #33cccc,
              0px 4px 1px #334fcc,
              4px 4px 5px rgba(85, 184, 175, 0.7),
              0px 0px 7px #33cccc;
     font-size: 20px;
+}
+label{
+    text-shadow: -1px -1px 1px #33cccc,
+             0px 4px 1px #334fcc,
+             4px 4px 5px rgba(85, 184, 175, 0.7),
+             0px 0px 7px #33cccc;
+    font-size: 23px;
+    font-style: bold;
 }
 @keyframes colorchange
     {
