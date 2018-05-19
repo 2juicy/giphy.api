@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src='assets/javascript/app.js'></script>
+	
 	<title>Giphy!</title>
 </head>
 <body>
@@ -15,11 +15,13 @@
 <hr>
 	<div class="container">	
 		<form id="gameForm">
-      			<label for="gameInput">Add A Game</label>
-      			<input type="text" id="gameInput" placeholder="ex. FORTNITE"><br>
-    		</form>
-		<button id="addGame" type="submit">Add</button>
+      		<label for="gameInput">Add A Game</label>
+      		<input type="text" id="gameInput" placeholder="ex. FORTNITE">
+			<input id="addGame" type="submit" value='Add a Game'>
+		</form>
+		<div id="buttons"></div>		
 	</div>	
 	<div id='gif'></div>
+	<script type="text/javascript" src='assets/javascript/app.js'></script>
 </body>
 </html>
