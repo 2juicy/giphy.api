@@ -11,6 +11,7 @@ function displayInfo(){
           method: "GET"
         }).then(function(response) { 
         var result = response.data;
+        console.log(result);
         //added empty to fix spam.
         $('gif').empty();
         //loop to make each image
@@ -33,7 +34,7 @@ function displayInfo(){
             //attaching newDiv to HTML page showing AJAX call items.
             $('#gif').prepend(newDiv);
         };
-        //Function to change state
+        //Function to change state on click
         $('.gif').on('click', function(){
             var state = $(this).attr('data-state');
             if (state == 'still') {
@@ -46,7 +47,6 @@ function displayInfo(){
         });
     });
 }
-
 //Function for appending buttons
 function renderButtons() {
     $("#buttons").empty();
