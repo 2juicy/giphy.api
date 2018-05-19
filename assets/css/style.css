@@ -3,9 +3,22 @@
 	padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(style.css) no-repeat;
+    background-size: cover;
+}
 body{
     color:white;
-    background: black;
 }
 #gameInput{
     color: blue;
@@ -48,6 +61,20 @@ hr{
     animation: colorchange 5s infinite;
     -webkit-animation: colorchange 5s infinite; 
 }
+.games, #addGame, label{
+    margin: 5px 1px 5px 5px;
+    padding: 5px;
+    animation: colorchange 4s infinite;
+    border: 2px solid white;
+    box-shadow: 0px 3px 8px whitesmoke;
+    color: white;
+    border-radius: 15px 15px 15px 15px;
+    text-shadow: -1px -1px 1px #33cccc,
+             0px 4px 1px #334fcc,
+             4px 4px 5px rgba(85, 184, 175, 0.7),
+             0px 0px 7px #33cccc;
+    font-size: 20px;
+}
 @keyframes colorchange
     {
       0%   {background: #33cccc;}
@@ -64,18 +91,7 @@ hr{
       75%  {background: green;}
       100% {background: rgb(170, 228, 77);}
     }
-.games, #addGame, label{
-    margin: 5px 1px 5px 5px;
-    padding: 5px;
-    background: transparent;
-    color: white;
-    border-radius: 15px 15px 15px 15px;
-    text-shadow: -1px -1px 1px #33cccc,
-             0px 4px 1px #334fcc,
-             4px 4px 5px rgba(85, 184, 175, 0.7),
-             0px 0px 7px #33cccc;
-    font-size: 20px;
-}
+
 #gameForm{
     float:right;
 }
