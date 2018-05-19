@@ -75,6 +75,9 @@ hr{
              0px 0px 7px #33cccc;
     font-size: 20px;
 }
+.games:hover, #addGame:hover{
+    border: 2px solid red;
+}
 label{
     text-shadow: -1px -1px 1px #33cccc,
              0px 4px 1px #334fcc,
