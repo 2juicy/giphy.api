@@ -1,5 +1,5 @@
 //Global Variables
-var topics = ['Overwatch', 'Hearthstone', 'Starcraft 2'];
+var topics = ['Overwatch', 'Hearthstone', 'Starcraft 2', 'Diablo 3', 'League of Legends', 'Dota 2', 'Fortnite', 'Player Unknown: Battlegrounds'];
 //function for AJAX to populate page
 function displayInfo(){
     var search = $(this).attr("data-name");

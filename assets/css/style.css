@@ -76,9 +76,17 @@ hr{
              0px 0px 7px #33cccc;
     font-size: 20px;
 }
+#addGame{
+    animation: colorchange 2s infinite;
+}
 .games:hover, #addGame:hover{
     border: 2px solid red;
 }
+.games:active, #addGame:active {
+    background: antiquewhite;
+    opacity: 0.66;
+    transform: translateY(3px);
+    }
 label{
     text-shadow: -1px -1px 1px #33cccc,
              0px 4px 1px #334fcc,
