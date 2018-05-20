@@ -1,5 +1,5 @@
 //Topics Array
-var topics = ['Dat Ass', 'Epic Win', 'Victory', "That's cool", 'WTF', 'Rage' ,'Finger Gun', 'Win', 'Salt Bae', 'Facepalm', 'Table Flip', 'LOL', 'Everything is Fine', 'Fail' , 'BFD', 'Awkward', 'Love', 'I Give Up', 'Meh', 'Bored', 'Cool Story Bro', 'Smart'];
+var topics = ['Ultra', 'Chill', 'Relax', 'Angry', 'Confused', 'Bothered', 'Jubilation', 'LOL', 'Cool Story Bro', 'Meh', 'Excited', 'Whimsical', 'Dat Ass Tho'];
 //function for AJAX to populate page
 function displayInfo(){
     var search = $(this).attr("data-name");
