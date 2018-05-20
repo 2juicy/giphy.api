@@ -1,5 +1,5 @@
 //Topics Array
-var topics = ['Ultra', 'Chill', 'Relax', 'Angry', 'Confused', 'Bothered', 'Jubilation', 'LOL', 'Cool Story Bro', 'Meh', 'Excited', 'Whimsical', 'Dat Ass Tho'];
+var topics = ['Ultra', 'Chill', 'Relax', 'Angry', 'Confused', 'Bothered', 'Jubilation', 'LOL', 'Cool Story Bro', 'Meh', 'Excited', 'Whimsical'];
 //function for AJAX to populate page
 function displayInfo(){
     var search = $(this).attr("data-name");
