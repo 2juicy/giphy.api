@@ -1,5 +1,14 @@
 //Topics Array
 var topics = ['Frilled Shark', 'Giant Spider Crab', 'Fangtooth Fish', 'Six-Gill Shark', 'Vampire Squid', 'Big Red Jellyfish', 'Giant Squid', 'Blobfish', 'Giant Isopod', 'Chimaera'];
+//attempt at local storage
+var favorites = JSON.parse(localStorage.getItem("favorite"));
+if (!Array.isArray(favorites)) {
+        favorites = [];
+      }
+for (var i = 0; i < favorites.length; i++) {
+        topics.push(favorites[i]);
+    }
+localStorage.clear();
 //function for AJAX to populate page
 function displayInfo(){
     var search = $(this).attr("data-name");
@@ -77,12 +86,11 @@ $("#addGame").on("click", function(event) {
     }
     topics.push(games);
     renderButtons();
-    console.log(topics);
-    //Local Storage Attempt
-    localStorage.setItem("favorite", games);
+    favorites.push(games);
+    console.log(favorites);
+    localStorage.setItem("favorite", JSON.stringify(favorites));
 });
 //On.click for AJAX populating page
 $(document).on("click", ".games", displayInfo);
 //call once at start
-topics.push(localStorage.getItem('favorite'));
 renderButtons();
