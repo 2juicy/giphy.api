@@ -1,5 +1,5 @@
 //Topics Array
-var topics = ['Ultra', 'Chill', 'Relax', 'Angry', 'Confused', 'Bothered', 'Jubilation', 'LOL', 'Cool Story Bro', 'Meh', 'Excited', 'Whimsical'];
+var topics = ['Frilled Shark', 'Giant Spider Crab', 'Fangtooth Fish', 'Six-Gill Shark', 'Vampire Squid', 'Big Red Jellyfish', 'Giant Squid', 'Blobfish', 'Giant Isopod', 'Chimaera'];
 //function for AJAX to populate page
 function displayInfo(){
     var search = $(this).attr("data-name");
