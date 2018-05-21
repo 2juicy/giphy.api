@@ -58,6 +58,9 @@ function displayInfo(){
 function renderButtons() {
     $("#buttons").empty();
     for (var i = 0; i < topics.length; i++) {
+        if (topics[i] == ''){
+            return;
+        }
         var a = $("<button>");
         a.addClass("games");
         a.attr("data-name", topics[i]);
@@ -75,8 +78,11 @@ $("#addGame").on("click", function(event) {
     topics.push(games);
     renderButtons();
     console.log(topics);
+    //Local Storage Attempt
+    localStorage.setItem("favorite", games);
 });
 //On.click for AJAX populating page
 $(document).on("click", ".games", displayInfo);
 //call once at start
+topics.push(localStorage.getItem('favorite'));
 renderButtons();
