@@ -1,6 +1,6 @@
 //Topics Array
 var topics = ['Frilled Shark', 'Giant Spider Crab', 'Fangtooth Fish', 'Six-Gill Shark', 'Vampire Squid', 'Big Red Jellyfish', 'Giant Squid', 'Blobfish', 'Giant Isopod', 'Chimaera'];
-//attempt at local storage
+//local storage
 var favorites = JSON.parse(localStorage.getItem("favorite"));
 if (!Array.isArray(favorites)) {
         favorites = [];
@@ -36,9 +36,11 @@ function displayInfo(){
             sImage.attr('data-animate', result[i].images.fixed_height.url);
             sImage.attr('data-state', 'still');
             //creating download link
-            var dLink = result[i].images.original.url;  
-            //Not sure why 1 click download doesn't work tried.
-            var addLink = $("<a href=" + dLink + " download target='_blank'>")
+            var dLink = result[i].images.original.url;
+            var split = dLink.split('?', 1);
+            console.log(split);
+            //Not sure why 1 click download doesn't work tried split and download property.
+            var addLink = $("<a href=" + split + " download target='_blank'>")
             var d = $("<p class='download' download>").text('Download Original');
             addLink.append(d);
             //attaching both elements, image, link and rating to div
