@@ -88,12 +88,14 @@ $("#addGame").on("click", function(event) {
     favorites.push(games);
     console.log(favorites);
     localStorage.setItem("favorite", JSON.stringify(favorites));
+    document.getElementById("gameForm").reset();
 });
 //On.click for AJAX populating page
 $(document).on("click", ".games", displayInfo);
 //Clear favorites list
 $("#clearList").on("click", function(event) {
     localStorage.clear();
+    location.reload();
 });
 //call once at start
 renderButtons();
