@@ -38,7 +38,6 @@ function displayInfo(){
             //creating download link
             var dLink = result[i].images.original.url;
             var split = dLink.split('?', 1);
-            console.log(split);
             //Not sure why 1 click download doesn't work tried split and download property.
             var addLink = $("<a href=" + split + " download target='_blank'>")
             var d = $("<p class='download' download>").text('Download Original');
