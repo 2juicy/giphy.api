@@ -8,7 +8,6 @@ if (!Array.isArray(favorites)) {
 for (var i = 0; i < favorites.length; i++) {
         topics.push(favorites[i]);
     }
-localStorage.clear();
 //function for AJAX to populate page
 function displayInfo(){
     var search = $(this).attr("data-name");
@@ -92,5 +91,9 @@ $("#addGame").on("click", function(event) {
 });
 //On.click for AJAX populating page
 $(document).on("click", ".games", displayInfo);
+//Clear favorites list
+$("#clearList").on("click", function(event) {
+    localStorage.clear();
+});
 //call once at start
 renderButtons();

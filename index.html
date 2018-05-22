@@ -15,9 +15,10 @@
     	<h1>Giphy.API</h1>
 		<form id="gameForm">
       		<label for="gameInput">Add Favorite: </label>
-      		<input type="text" id="gameInput" placeholder="ex. Trending">
+      		<input type="text" onfocus="this.value=''" id="gameInput" placeholder="ex. Trending">
 			<input id="addGame" type="submit" value="Favorite">
 		</form>
+		<button id='clearList' onClick="window.location.reload()">Reset Favorites</button>
 <hr>
 		<div id="buttons"></div>
 		<div id='gif'></div>

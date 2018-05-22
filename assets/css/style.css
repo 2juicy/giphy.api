@@ -66,7 +66,7 @@ hr{
     animation: colorchange 5s infinite;
     -webkit-animation: colorchange 5s infinite; 
 }
-.games, #addGame{
+.games, #addGame, #clearList{
     margin: 2px 1px 5px 5px;
     padding: 5px;
     animation: colorchange 4s infinite;
@@ -81,11 +81,11 @@ hr{
              0px 0px 7px #33cccc;
     font-size: 20px;
 }
-#addGame{
+#addGame, #clearList{
     font-size: 23px;
     animation: colorchange 2s infinite;
 }
-.games:hover, #addGame:hover{
+.games:hover, #addGame:hover, #clearList:hover{
     color:red;
     border: 2px solid red;
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -107,7 +107,7 @@ hr{
     transform: translate3d(4px, 0, 0);
   }
 }
-.games:active, #addGame:active {
+.games:active, #addGame:active, #clearList:active {
     background: antiquewhite;
     opacity: 0.66;
     transform: translateY(3px);
@@ -139,6 +139,11 @@ label{
     }
 #gameForm{
     float:right;
+}
+#clearList{
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 h1{
     display: block;
